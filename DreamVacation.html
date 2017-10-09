@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<style>
+	
+		body {	background-color: #F0F0F0	}
+		#main 
+		{ margin: auto; 
+		width: 85%; 
+		height: 80%; 
+		background-color: white; 
+		text-align: center;	}
+		
+		h2 {color: red;}
+		
+	</style>
+
+</head>
+
+
+
+
+
+<body>
+
+<h1 align = "center" > My Dream Vacation Around The World! </h1>
+
+<div id="googleMap" style="width:100%;height:500px;"></div>
+
+<script>
+
+function myMap() {
+var mapCenter = new google.maps.LatLng(0, 0);
+var mapProp= {
+    center: mapCenter,
+    zoom:2,		};
+
+  
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+
+var EiffelTower = new google.maps.LatLng(48.8584, 2.2945)
+
+var GreatWall = new google.maps.LatLng(40.4319, 116.5704) 
+
+var PyramidGiza = new google.maps.LatLng(29.9792, 31.1342)
+
+var StatueLiberty = new google.maps.LatLng(40.6892, -74.0445)
+
+var Vatican = new google.maps.LatLng(41.9029, 12.4534)
+
+
+var EiffelTowerMarker = new google.maps.Marker({position: EiffelTower});
+EiffelTowerMarker.setMap(map);
+google.maps.event.addListener(EiffelTowerMarker,'click',function() {
+	var pos = map.getZoom();
+  map.setZoom(10);
+  map.setCenter(EiffelTowerMarker.getPosition());
+  window.setTimeout(function() {map.setZoom(pos);},3000);
+  });
+  
+
+var GreatWallMarker = new google.maps.Marker({position: GreatWall});
+GreatWallMarker.setMap(map);
+google.maps.event.addListener(GreatWallMarker,'click',function() {
+	var pos = map.getZoom();
+  map.setZoom(10);
+  map.setCenter(GreatWallMarker.getPosition());
+  window.setTimeout(function() {map.setZoom(pos);},3000);
+  });
+  
+  
+
+var PyramidGizaMarker = new google.maps.Marker({position: PyramidGiza});
+PyramidGizaMarker.setMap(map);
+google.maps.event.addListener(PyramidGizaMarker,'click',function() {
+	var pos = map.getZoom();
+  map.setZoom(10);
+  map.setCenter(PyramidGizaMarker.getPosition());
+  window.setTimeout(function() {map.setZoom(pos);},3000);
+  });
+  
+  
+
+var StatueLibertyMarker = new google.maps.Marker({position: StatueLiberty});
+StatueLibertyMarker.setMap(map);
+google.maps.event.addListener(StatueLibertyMarker,'click',function() {
+	var pos = map.getZoom();
+  map.setZoom(10);
+  map.setCenter(StatueLibertyMarker.getPosition());
+  window.setTimeout(function() {map.setZoom(pos);},3000);
+  });
+  
+  
+
+var VaticanMarker = new google.maps.Marker({position: Vatican});
+VaticanMarker.setMap(map);
+google.maps.event.addListener(VaticanMarker,'click',function() {
+	var pos = map.getZoom();
+  map.setZoom(10);
+  map.setCenter(VaticanMarker.getPosition());
+  window.setTimeout(function() {map.setZoom(pos);},3000);
+  });
+  
+  
+
+
+var infowindow = new google.maps.InfoWindow({
+  content:"The Eiffel Tower"
+  });
+
+infowindow.open(map,EiffelTowerMarker);
+
+
+var infowindow = new google.maps.InfoWindow({
+  content:"The Great Wall"
+  });
+
+infowindow.open(map,GreatWallMarker);
+
+var infowindow = new google.maps.InfoWindow({
+  content:"The Great Pyramid of Giza"
+  });
+
+infowindow.open(map,PyramidGizaMarker);
+
+var infowindow = new google.maps.InfoWindow({
+  content:"The Statue of Liberty"
+  });
+
+infowindow.open(map,StatueLibertyMarker);
+
+var infowindow = new google.maps.InfoWindow({
+  content:"The Vatican"
+  });
+
+infowindow.open(map,VaticanMarker);
+
+var myTrip = [StatueLiberty, EiffelTower, Vatican, PyramidGiza, GreatWall];
+var flightPath = new google.maps.Polyline({
+  path:myTrip,
+  strokeColor:"#ff0000",
+  strokeOpacity:0.8,
+  strokeWeight:2
+}); 
+flightPath.setMap(map);
+
+
+}
+</script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4oe3ipNvJZtxE4SGWebnvqcbj
+DSceqVM&callback=myMap"></script>
+
+<h2> The Journey </h2>
+
+<p> There's many places I want to visit around the world. These are just a few but they 
+are my top 5 must visit. My journey would start off in New York at the Statue of Liberty
+and of course while I'm there I would tour the city. Next would be the Eiffel Tower in 
+Paris, then the Vatican in Italy, to the great pyramids in Egypt, and lastly the Great 
+Wall of China.  
+</p>
+
+<h3> New York </h3>
+<p> 
+</p>
+
+
+<h3> France </h3>
+<p>
+</p>
+
+
+<h3> Italy </h3>
+<p>
+</p>
+
+
+<h3> Egypt </h3>
+<p>
+</p>
+
+
+<h3> China </h3>
+<p>
+</p>
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
