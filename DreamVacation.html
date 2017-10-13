@@ -58,7 +58,7 @@ google.maps.event.addListener(EiffelTowerMarker,'click',function() {
 	var pos = map.getZoom();
   map.setZoom(10);
   map.setCenter(EiffelTowerMarker.getPosition());
-  window.setTimeout(function() {map.setZoom(pos);},3000);
+  window.setTimeout(function() {map.setZoom(pos);},5000);
   });
   
 
@@ -68,7 +68,7 @@ google.maps.event.addListener(GreatWallMarker,'click',function() {
 	var pos = map.getZoom();
   map.setZoom(10);
   map.setCenter(GreatWallMarker.getPosition());
-  window.setTimeout(function() {map.setZoom(pos);},3000);
+  window.setTimeout(function() {map.setZoom(pos);},5000);
   });
   
   
@@ -79,7 +79,7 @@ google.maps.event.addListener(PyramidGizaMarker,'click',function() {
 	var pos = map.getZoom();
   map.setZoom(10);
   map.setCenter(PyramidGizaMarker.getPosition());
-  window.setTimeout(function() {map.setZoom(pos);},3000);
+  window.setTimeout(function() {map.setZoom(pos);},5000);
   });
   
   
@@ -90,7 +90,7 @@ google.maps.event.addListener(StatueLibertyMarker,'click',function() {
 	var pos = map.getZoom();
   map.setZoom(10);
   map.setCenter(StatueLibertyMarker.getPosition());
-  window.setTimeout(function() {map.setZoom(pos);},3000);
+  window.setTimeout(function() {map.setZoom(pos);},5000);
   });
   
   
@@ -101,7 +101,7 @@ google.maps.event.addListener(VaticanMarker,'click',function() {
 	var pos = map.getZoom();
   map.setZoom(10);
   map.setCenter(VaticanMarker.getPosition());
-  window.setTimeout(function() {map.setZoom(pos);},3000);
+  window.setTimeout(function() {map.setZoom(pos);},5000);
   });
   
   
@@ -147,8 +147,17 @@ var flightPath = new google.maps.Polyline({
 }); 
 flightPath.setMap(map);
 
+function myMap() {
+var mapCenter = new google.maps.LatLng(0, 0);
+var mapProp= {
+    center: mapCenter,
+    zoom:2,		};
+
+  
+var map=new google.maps.Map(document.getElementById("googleMap2"),mapProp);
 
 }
+
 </script>
 
 
@@ -165,7 +174,8 @@ Wall of China.
 </p>
 
 <h3> New York </h3>
-<p> 
+<p> When I visit New York of course I'll visit the Statue of Liberty but when I'm there I'll also go for the food. I'll eat the famous
+pizza
 </p>
 <img src="StatueLiberty.jpg" height="500" width="500" >
 
@@ -189,7 +199,7 @@ Wall of China.
 </p>
 <img src="GreatWall.jpg" height="500" width="500">
 
-
+<div id="googleMap2" style="width:100%;height:500px;"></div>
 
 
 
