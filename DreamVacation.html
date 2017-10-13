@@ -147,19 +147,17 @@ var flightPath = new google.maps.Polyline({
 }); 
 flightPath.setMap(map);
 
-function myMap() {
+
 var mapCenter = new google.maps.LatLng(0, 0);
 var mapProp= {
     center: mapCenter,
     zoom:2,		};
 var map=new google.maps.Map(document.getElementById("googleMap2"),mapProp);
 
-
+}
 </script>
 
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4oe3ipNvJZtxE4SGWebnvqcbj
-DSceqVM&callback=myMap"></script>
 
 <h2> The Journey </h2>
 
@@ -197,7 +195,8 @@ pizza
 <img src="GreatWall.jpg" height="500" width="500">
 
 <div id="googleMap2" style="width:100%;height:500px;"></div>
-
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4oe3ipNvJZtxE4SGWebnvqcbj
+DSceqVM&callback=myMap"></script>
 
 
 </body>
